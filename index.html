@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper or Scissors game</title>
+</head>
+
+<body>
+    <script>
+        function rockPaperScissorsGame() {
+            let choices = ["rock", "paper", "scissors"];
+
+            let playerChoice = prompt("Select an option: rock, paper, or scissors: ").toLowerCase();
+
+            let random = Math.floor(Math.random() * 3);
+            let computerChoice = choices[random];
+
+            console.log(`Your choice: ${playerChoice}\nComputer's choice: ${computerChoice}`);
+
+            if (playerChoice == computerChoice) {
+                console.log("It is a drawback!");
+            } else if ((playerChoice == "rock" && computerChoice == "scissors") || (playerChoice == "paper" && computerChoice == "rock") || (playerChoice == "scissors" && computerChoice == "paper")) {
+                console.log("You win!");
+            } else {
+                console.log("You lose!");
+            }
+        }
+
+        rockPaperScissorsGame();
+    </script>
+</body>
+
+</html>
